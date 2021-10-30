@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import inViewOptions from '../utils/inViewOptions'
+import inViewOptions from '../utils/inViewOptions';
 
 const About = () => {
   const { ref, inView } = useInView(inViewOptions);
@@ -15,16 +15,13 @@ const About = () => {
     >
       <div className="container text-center">
         <h2 className="pb-2 fw-3" ref={ref}>
-          Lorem, ipsum dolor sit
+          Hi, my name is Panat Putnak
         </h2>
         <p className="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus quam totam accusamus iure obcaecati ut non dolorem
-          repudiandae qui odit, voluptate eum illo at sunt consectetur provident
-          possimus reprehenderit nisi? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Necessitatibus quam totam accusamus iure obcaecati
-          ut non dolorem repudiandae qui odit, voluptate eum illo at sunt
-          consectetur provident possimus reprehenderit nisi?
+          I am an ambitious and passionate self-taught full stack web developer
+          who is keen on good design and new tech. <br /> I have strong Understanding
+          in modern frameworks and my motto is to never stop learning. <br /> Devoted to building
+          user-friendly, interactive websites and always strive to find a new way to solve problems.
         </p>
       </div>
     </section>

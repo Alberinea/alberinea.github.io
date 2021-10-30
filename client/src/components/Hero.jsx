@@ -5,7 +5,7 @@ import { ReactComponent as Github } from '../assets/github.svg';
 
 const Hero = () => {
   return (
-    <section id="hero" className="py-5 text-center">
+    <section id="home" className="py-5 text-center relative z-minus">
       <div className="container">
         <h4 className="fs-6 fw-5 typewriter">Hello there!</h4>
         <h1 className="fs-1 fw-5 typewriter2">

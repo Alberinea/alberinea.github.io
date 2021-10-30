@@ -16,7 +16,14 @@ const Skills = () => {
   const { ref, inView } = useInView(inViewOptions);
 
   return (
-    <section id="skills" className={inView ? 'py-5 appear' : 'py-5 disappear'}>
+    <section
+      id="skills"
+      className={
+        inView
+          ? 'py-5 appear relative z-minus'
+          : 'py-5 disappear relative z-minus'
+      }
+    >
       <div className="container text-center">
         <div className="pb-2" ref={ref}>
           <h4 className="pb-2">Language</h4>
