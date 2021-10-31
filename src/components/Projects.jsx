@@ -36,14 +36,14 @@ const Projects = () => {
     setIndex(i);
   };
 
-  React.useEffect(() => {
-    const incrementInterval = setInterval(() => {
-      increment();
-    }, 8000);
-    return () => {
-      clearInterval(incrementInterval);
-    };
-  }, [index]);
+  // React.useEffect(() => {
+  //   const incrementInterval = setInterval(() => {
+  //     increment();
+  //   }, 8000);
+  //   return () => {
+  //     clearInterval(incrementInterval);
+  //   };
+  // }, [index]);
 
   return (
     <section
@@ -57,12 +57,15 @@ const Projects = () => {
       <div className="container relative flex justify-center py-4">
         <span
           ref={ref}
-          className="left-arrow no-select"
+          className="left-arrow arrow no-select"
           onClick={() => decrement()}
         >
           &#60;
         </span>
-        <span className="right-arrow no-select" onClick={() => increment()}>
+        <span
+          className="right-arrow arrow no-select"
+          onClick={() => increment()}
+        >
           &#62;
         </span>
         <TransitionGroup
@@ -88,17 +91,21 @@ const Projects = () => {
                 </div>
               </div>
               <div className="hover-container">
-                <img src={projects[index].image} alt={projects[index].title} />
+                <img
+                  className="image"
+                  src={projects[index].image}
+                  alt={projects[index].title}
+                />
                 <div className="hover">
-                  <p>{projects[index].text}</p>
+                  <p className="hover-text">{projects[index].text}</p>
                   <div className="flex flex-wrap py-1 mx-auto justify-center">
                     {projects[index].tags.map((tag) => (
-                      <p className="pr-1 text-red" key={v4()}>
+                      <p className="pr-1 text-red tag" key={v4()}>
                         #{tag}
                       </p>
                     ))}
                   </div>
-                  <div className="flex mx-auto justify-center">
+                  <div className="flex mx-auto justify-center button-container">
                     <a
                       className="btn-outline mr-1"
                       target="_blank"

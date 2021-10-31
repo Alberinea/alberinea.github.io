@@ -12,7 +12,7 @@ const Header = () => {
       >
         <div>
           <li>
-            <a href="#home">Home</a>
+            <a href="#top">Top</a>
           </li>
           <li>
             <a href="#about">About</a>
@@ -29,9 +29,9 @@ const Header = () => {
         </div>
       </ul>
       <nav className="navbar-container">
-        <a href="#home">
+        <a href="#top">
           <img
-            className="z-20 relative"
+            className="z-20 relative logo"
             src={logo}
             alt="logo"
             onClick={() => setTrigger(false)}

@@ -1,7 +1,7 @@
 import Paystore from '../assets/projects/Paystore.png';
 import TNW from '../assets/projects/TNW.png';
 import MemoryGame from '../assets/projects/Memory Game.png';
-import Calculator from '../assets/projects/Calculator.png';
+import Illusion from '../assets/projects/Illusion.png';
 import Blog from '../assets/projects/Blog.png';
 import INCB from '../assets/projects/INCB.png';
 import Battleship from '../assets/projects/Battleship.png';
@@ -55,12 +55,12 @@ const projects = [
     text: 'A responsive CV app maker that a user can upload user image and change theme color with a function to download the finished CV.',
   },
   {
-    title: 'Calculator',
-    image: Calculator,
-    tags: ['HTML', 'CSS', 'Javascript'],
-    demo: 'https://alberinea.github.io/Calculator',
-    source: 'https://github.com/Alberinea/Calculator',
-    text: 'A stylish calculator that has all basic functions built in order to practice using javascript logics.',
+    title: 'Member only message board',
+    image: Illusion,
+    tags: ['Javascript', 'Bootstrap', 'node + express', 'noSQL(MongoDB)'],
+    demo: 'https://illusion-9503.herokuapp.com',
+    source: 'https://github.com/Alberinea/member-only-message-board',
+    text: 'A session based authentication CRUD message board with registration and login function. Included Sanitization and Input validation to enhance security and provide seamless user interface.',
   },
   {
     title: 'Inventory Application',
