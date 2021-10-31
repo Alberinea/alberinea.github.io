@@ -1,7 +1,6 @@
-import { ReactComponent as Gmail } from '../assets/gmail.svg';
-import { ReactComponent as Line } from '../assets/Line.svg';
-import { ReactComponent as Twitter } from '../assets/twitter.svg';
-import { ReactComponent as Github } from '../assets/github.svg';
+import { ReactComponent as Gmail } from '../assets/logos/gmail.svg';
+import { ReactComponent as Line } from '../assets/logos/Line.svg';
+import { ReactComponent as Github } from '../assets/logos/github.svg';
 
 const Hero = () => {
   return (
@@ -13,10 +12,27 @@ const Hero = () => {
         </h1>
         <h4 className="fs-6 my-1 qualification">A Full Stack Developer</h4>
         <div className="flex justify-center icon-container">
-          <Gmail />
-          <Line />
-          <Twitter />
-          <Github />
+          <a
+            href="mailto:kan9870@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Gmail />
+          </a>
+          <a
+            href="http://line.me/ti/p/~mustex"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Line />
+          </a>
+          <a
+            href="https://github.com/Alberinea"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github />
+          </a>
         </div>
         <button type="button" className="btn my-1">
           Download CV

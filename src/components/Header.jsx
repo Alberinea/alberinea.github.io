@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logos/logo.svg';
 
 const Header = () => {
   const [trigger, setTrigger] = useState(false);

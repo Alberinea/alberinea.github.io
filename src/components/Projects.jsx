@@ -36,14 +36,14 @@ const Projects = () => {
     setIndex(i);
   };
 
-  // React.useEffect(() => {
-  //   const incrementInterval = setInterval(() => {
-  //     increment();
-  //   }, 8000);
-  //   return () => {
-  //     clearInterval(incrementInterval);
-  //   };
-  // }, [index]);
+  React.useEffect(() => {
+    const incrementInterval = setInterval(() => {
+      increment();
+    }, 8000);
+    return () => {
+      clearInterval(incrementInterval);
+    };
+  }, [index]);
 
   return (
     <section

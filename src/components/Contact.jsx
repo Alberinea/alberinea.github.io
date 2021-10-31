@@ -1,0 +1,77 @@
+import { useForm, ValidationError } from '@formspree/react';
+
+const Contact = () => {
+  const [state, handleSubmit] = useForm('xeqvbozj');
+
+  return (
+    <section id="contact" className="py-3">
+      <div className="container flex flex-col">
+        <h3 className="form-text text-center">
+          Leave a message and I will get back to you as soon as I can
+        </h3>
+        <form className="form" onSubmit={handleSubmit}>
+          {state.succeeded && (
+            <div
+              className="form-success"
+              onClick={() => (state.succeeded = !state.succeeded)}
+            >
+              Message was sent successfully!
+            </div>
+          )}
+          <ValidationError
+            className="form-failure"
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+          />
+          <ValidationError
+            className="form-failure"
+            prefix="Name"
+            field="name"
+            errors={state.errors}
+          />
+          <ValidationError
+            className="form-failure"
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+          <input
+            required
+            className="input form-input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name*"
+          />
+          <input
+            required
+            className="form-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail*"
+          />
+          <textarea
+            required
+            className="form-textarea"
+            name="message"
+            id="message"
+            placeholder="Message*"
+            cols="30"
+            rows="3"
+          />
+          <button
+            className="btn-outline-black"
+            type="submit"
+            disabled={state.submitting}
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

@@ -330,6 +330,68 @@ a:hover {
 
 /* specific classes */
 
+.form-success {
+  background-color: #4ed36d;
+  border-color: #c3e6cb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.35rem 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-failure {
+  background-color: #d34e4e;
+  border-color: #c3e6cb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.35rem 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  max-width: 400px;
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form-input {
+  border: 0;
+  border-bottom: 1px solid var(--black);
+  outline: none;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  padding: 0 0.25rem;
+}
+
+.form-textarea {
+  outline: none;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  resize: vertical;
+  padding: 0.25rem;
+}
+
+.form-textarea:focus {
+  border: 2px solid var(--blue);
+}
+
+.form-input:focus {
+  border-bottom: 2px solid var(--blue);
+}
+
 .navbar-list {
   position: absolute;
   opacity: 0;
@@ -392,11 +454,30 @@ a:hover {
   user-select: none;
 }
 
-.icon-container > * {
+.icon-container > a {
+  margin: 0.5rem;
+}
+
+.icon-container > a > * {
   margin: 0.5rem;
   cursor: pointer;
   width: 17px;
   height: 17px;
+}
+
+.icon-footer-container > a {
+  margin: 1rem;
+}
+
+.icon-footer-container > a > * {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  opacity: 0.35;
+}
+
+.icon-footer-container > a > *:hover {
+  opacity: 1;
 }
 
 .tooltip > svg {
@@ -557,7 +638,8 @@ a:hover {
   transition: opacity 300ms ease-in;
 }
 
-.btn-outline {
+.btn-outline,
+.btn-outline-black {
   border-radius: 5px;
   background-color: inherit;
   border: 1px white solid;
@@ -566,6 +648,18 @@ a:hover {
   transition: 200ms ease;
   user-select: none;
   -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.btn-outline-black {
+  background-color: white !important;
+  color: var(--black) !important;
+  border: 1px var(--black) solid;
+}
+
+.btn-outline-black:hover {
+  background-color: var(--black) !important;
+  color: white !important;
 }
 
 .btn-outline:hover {
@@ -905,6 +999,9 @@ a:hover {
   .tag {
     font-size: 0.75rem;
   }
+  .form-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 288px) {
@@ -927,5 +1024,8 @@ a:hover {
   }
   .button-container {
     font-size: 0.5rem;
+  }
+  .form-text {
+    font-size: 0.75rem;
   }
 }
