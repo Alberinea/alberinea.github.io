@@ -69,6 +69,8 @@ const Contact = () => {
             Send
           </button>
         </form>
+        <h3 className="form-text text-center">You can also call me at</h3>
+        <h2 className="form-text text-center py-1 text-blue">099-4795329</h2>
       </div>
     </section>
   );
